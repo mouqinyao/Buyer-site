@@ -77,7 +77,10 @@ body {
 				margin-top: 10px;
 				padding: 10px;
 				text-align: left;
-				border-top: 1px solid #ddd;
+				border-left: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+				border-bottom: 1px solid #ddd;
+				background-color: #fff;
 			}
 
 			.menu__sub-list li {
@@ -85,6 +88,7 @@ body {
 				font-size: 14px;
 				line-height: 1.5em;
 				list-style: none;
+				z-index: 100;
 			}
 
 			.menu__sub-list li a {
@@ -96,9 +100,14 @@ body {
 				color: #f25950;
 			}
 
-/* Page Content */
-.page {
-	padding-top: 50px;
+/* Banner */
+.banner {
+	min-height: 500px;
+	background-image: url(/app/images/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.15);
+	        box-shadow: 0px -2px 5px 0px rgba(0, 0, 0, 0.15);
 }
 
 /* Button Style */
