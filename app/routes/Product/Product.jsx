@@ -1,20 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 
-import Heading from '~/components/Heading';
-import Menu from '~/components/Menu';
-
 class Product extends Component {
 
 	constructor(props) {
 	    super(props);
-	   
+
+	    // Get route params
+	    console.log(this.props.match.params)
 	}
 
 	render() {
-		return (
-		  <div> 	
-		    <Heading />
-		    <Menu />
+		return (	
 		    <div className="product">
 		    	<div className="product__left-panel">
 		    		<div className="product__band">
@@ -45,7 +41,6 @@ class Product extends Component {
 		    		</div>
 		    	</div>
 		    </div>
-		  </div>
 		);
 	}
 }

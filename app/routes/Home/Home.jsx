@@ -1,8 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-import Heading from '~/components/Heading';
-import Menu from '~/components/Menu';
-
 class Home extends Component {
 
 	constructor(props) {
@@ -13,8 +10,7 @@ class Home extends Component {
 	render() {
 		return (
 		  <div> 	
-		    <Heading />
-		    <Menu />
+		  	HOME
 		  </div>
 		);
 	}
