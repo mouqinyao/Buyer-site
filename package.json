@@ -1,5 +1,5 @@
 {
-  "name": "MySubaruApp",
+  "name": "Buyer-site",
   "version": "0.0.1",
   "description": "app",
   "main": "index.js",
@@ -50,6 +50,7 @@
     "react-router": "^4.0.0",
     "react-router-dom": "^4.0.0",
     "redux": "^3.7.2",
+    "request": "^2.83.0",
     "whatwg-fetch": "^2.0.3"
   }
 }

@@ -15,6 +15,7 @@ class Menu extends Component {
           <div className="menu__category">商品分类</div>
           <ul className="menu__list">
             <li><a href="#">衣服馆</a></li>
+            <li><a href="#">鞋包馆</a></li>
             <li><a href="#">美妆馆</a></li>
             <li><a href="#">生活馆</a></li>
             <li><a href="#">Sephora</a></li>
