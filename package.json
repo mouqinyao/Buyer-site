@@ -38,7 +38,8 @@
     "source-map-support": "^0.4.14",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "express": "^4.15.2",

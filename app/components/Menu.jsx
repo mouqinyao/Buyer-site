@@ -18,9 +18,6 @@ class Menu extends Component {
             <li><a href="#">鞋包馆</a></li>
             <li><a href="#">美妆馆</a></li>
             <li><a href="#">生活馆</a></li>
-            <li><a href="#">Sephora</a></li>
-            <li><a href="#">Nordstrom</a></li>
-            <li><a href="#">Neiman Marcus</a></li>
           </ul>
         </div>
       </div>

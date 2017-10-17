@@ -3,6 +3,8 @@ const webpack = require('webpack');
 // builtin node path module
 const path = require('path');
 
+const nodeExternals = require('webpack-node-externals');
+
 // It moves every require('style.css') in entry chunks into a separate css output file.
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // Create html files from the bundle
@@ -37,6 +39,8 @@ module.exports = ({ base }) => {
 
         target: isClient ? 'web' : 'node',
 
+        externals: isClient ? '': [nodeExternals()],
+
         module: {
             loaders: [{
                 test: /\.jsx?$/,
@@ -54,7 +58,10 @@ module.exports = ({ base }) => {
                 loader: ['file-loader']               
             }, {
                 test: /\.css$/,
-                use: [ 'style-loader', 'css-loader' ]
+                use: ExtractTextPlugin.extract({
+                      fallback: "style-loader",
+                      use: "css-loader"
+                    })
             }, {
                 test: /\.(scss|sass)$/,
                 use: isClient
@@ -134,6 +141,10 @@ module.exports = ({ base }) => {
                 // use `if (ONSERVER) { ...` for server specific code
                 ONSERVER: true,
                 'process.env': { NODE_ENV: JSON.stringify(nodeEnv) }
+            }),
+            new ExtractTextPlugin({
+                filename: 'style.css',
+                allChunks: true
             })
         ]
     }
