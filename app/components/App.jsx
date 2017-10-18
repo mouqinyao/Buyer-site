@@ -7,9 +7,9 @@ import '~/css/product.css';
 
 import Heading from '~/components/Heading';
 import Menu from '~/components/Menu';
-import Home from '~/routes/Home/Home';
-import Product from '~/routes/Product/Product';
-import ProductDetail from '~/routes/Product/ProductDetail';
+import Home from '~/components/Home/Home';
+import Product from '~/components/Product/Product';
+import ProductDetail from '~/components/Product/ProductDetail';
 
 const App = () => ( 
   <Router>

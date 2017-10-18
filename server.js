@@ -13,6 +13,13 @@ const PORT = process.env.PORT || 8000
 // Create HTTP server
 const app = new express()
 const server = new http.Server(app)
+const mongoose = require('mongoose')
+
+//connect to our datablase
+mongoose.Promise = global.Promise;
+
+//For local host development
+
 
 // Serve static files
 app.use(express.static('build'))
