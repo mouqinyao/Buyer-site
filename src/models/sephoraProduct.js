@@ -4,7 +4,7 @@ var mongoose = require('mongoose'),
 var sephoraProductSchema = mongoose.Schema({
 	referenceNumber: Number,
 	title: String, 
-    price: String,
+    price: Number,
     brandName: String,
     brandDescription: String,
     image: String,
