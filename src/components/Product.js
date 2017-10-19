@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import axios from 'axios';
 
 class Product extends Component {
 
@@ -7,6 +8,14 @@ class Product extends Component {
 
 	    // Get route params
 	    console.log(this.props.match.params)
+	}
+
+	componentDidMount() {
+		axios.get('/allSephoraProducts').then(function(response) {
+			console.log(response);
+		}).catch(function(error) {
+			console.log(error);
+		});
 	}
 
 	render() {
