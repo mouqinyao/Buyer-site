@@ -3,6 +3,8 @@
 import path from 'path';
 import { Server } from 'http';
 import Express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter as Router } from 'react-router-dom';
@@ -10,6 +12,8 @@ import { App } from './components/App';
 
 const app = new Express();
 const server = new Server(app);
+//const mongoose = require('mongoose');
+//const bodyParser = require('body-parser');
 
 // use ejs templates
 app.set('view engine', 'ejs');
@@ -17,6 +21,20 @@ app.set('views', path.join(__dirname, 'views'));
 
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, 'static')));
+
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//connect to our datablase
+mongoose.connect('mongodb://mouqinyao:<password>@ds121945.mlab.com:21945/buyer-site', {
+  useMongoClient: true,
+  /* other options */
+});
+
+//Set API Routes
+app.use(require('./routes/products'));
 
 // universal routing and rendering
 app.get('*', (req, res) => {
