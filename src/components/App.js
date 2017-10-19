@@ -9,7 +9,7 @@ import Product from './Product';
 import ProductDetail from './ProductDetail';
 
 export const App = () => ( 
-  <div>
+  <div className="max-container">
     <Heading/>
     <Menu/>
     <Route path="/" exact component={Home}/>

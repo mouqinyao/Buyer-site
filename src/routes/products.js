@@ -6,18 +6,21 @@ const express = require('express'),
 
 // Save individual product 
 router.post('/saveProduct', function(req, res) {
+	
 	let sephoraProductModel = new SephoraProductModel({
-	  'referenceNumber': 1,
-	  'title': 'tokyo'
+	  'referenceNumber': 2,
+	  'title': '丝芙兰热销唇膏套装',
+	  'price': 68,
+	  'image': 'sephora-lip-set.png'
 	});
 
 	//save the sample user
 	sephoraProductModel.save(function(err) {
 		if (err) res.send(err);
 
-		res.send('This product has been saved successfully.');
+		//res.send('This product has been saved successfully.');
 
-		//console.log('This product has been saved successfully.');
+		console.log('This product has been saved successfully.');
 
 	});
 });
