@@ -37,7 +37,8 @@ class Menu extends Component {
                   <li><Link to="/product/esteelaunder">Estee Launder（雅诗兰黛）</Link></li>
                   <li><Link to="/product/fresh">Fresh （馥蕾诗）</Link></li>
                   <li><Link to="/product/lancome">Lancome（兰蔻）</Link></li>
-                  <li><Link to="/product/loccitane">Lancome（欧舒丹）</Link></li>
+                  <li><Link to="/product/loccitane">Loccitane（欧舒丹）</Link></li>
+                  <li><Link to="/product/kiehls">Kiehls (科颜氏)</Link></li>
                   <li><Link to="/product/origins">Origins（悦木之源）</Link></li>
                   <li><Link to="/product/sephora">Sephora（丝芙兰）</Link></li>
                 </ul>

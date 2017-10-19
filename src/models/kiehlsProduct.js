@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     increment = require('mongoose-increment');
 
-var sephoraProductSchema = mongoose.Schema({
+var kiehlsProductSchema = mongoose.Schema({
 	referenceNumber: Number,
 	title: String, 
     price: Number,
@@ -16,11 +16,11 @@ var sephoraProductSchema = mongoose.Schema({
     description: Array
 });
 
-sephoraProductSchema.plugin(increment, {
-  modelName: 'sephoraProductModel',
+kiehlsProductSchema.plugin(increment, {
+  modelName: 'kiehlsProductModel',
   fieldName: 'referenceNumber',
   start: 1,
   increment: 1,
 });
 
-module.exports = mongoose.model('sephoraProductModel', sephoraProductSchema);
+module.exports = mongoose.model('kiehlsProductModel', kiehlsProductSchema);

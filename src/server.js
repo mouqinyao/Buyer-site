@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //connect to our datablase
-mongoose.connect('mongodb://mouqinyao:password@ds121945.mlab.com:21945/buyer-site', {
+mongoose.connect('mongodb://mouqinyao:PASSWORD@ds121945.mlab.com:21945/buyer-site', {
   useMongoClient: true,
   /* other options */
 });

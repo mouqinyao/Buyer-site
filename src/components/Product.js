@@ -28,9 +28,27 @@ class Product extends Component {
 	getRouteParams(data) {
 
 		switch(data) {
+			case 'crabtreeandevelyn':
+				return '/allCrabtreeProducts';
+				break;
+			case 'esteelaunder':
+				return '/allEsteelaunderProducts';
+				break;
 			case 'fresh':
-		        return '/allFresh';
+		        return '/allFreshProducts';
 		        break;
+		    case 'lancome':
+		    	return '/allLancomeProducts';
+		    	break;
+		    case 'loccitane':
+		    	return '/allLoccitaneProducts';
+		    	break;
+		    case 'kiehls':
+		    	return '/allKiehlsProducts';
+		    	break;
+		    case 'origins':
+		    	return '/allOriginsProducts';
+		    	break;
 		    case 'sephora':
 		        return '/allSephoraProducts';
 		        break;		    
@@ -44,7 +62,6 @@ class Product extends Component {
 	getListofProducts(url) {		
 		let self = this;
 		axios.get(url).then(function(response) {
-			console.log(response.data);
 			self.setState({products: response.data});
 		}).catch(function(error) {
 			console.log(error);
@@ -76,15 +93,6 @@ class Product extends Component {
 		    			</div>
 		    		</div>
 		    		)}
-		    		<div className="product__card">
-		    			<div className="product__card-img-container">
-		    				<img src="/img/sephora-lip-set.png" className="product__card-img"/>
-		    			</div>
-		    			<div className="product__card-title">丝芙兰热销唇膏套装</div>
-		    			<div className="product__card-detail">
-		    				价格：<span className="product__card-price">$68</span>
-		    			</div>
-		    		</div>
 		    	</div>
 		    </div>
 		);
