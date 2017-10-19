@@ -6,16 +6,44 @@ class Product extends Component {
 	constructor(props) {
 	    super(props);
 
-	    // Get route params
-	    console.log(this.props.match.params);
 	    this.state = {
 	    	products: []
 	    }
 	}
 
 	componentDidMount() {
+		this.getListofProducts(this.getRouteParams(this.props.match.params.name));
+	}
+
+	componentWillReceiveProps(nextProps) {
+
+		// Update when route param is changed
+		if ( nextProps.match.params.name != this.props.match.params.name) {
+			
+			this.getListofProducts(this.getRouteParams(nextProps.match.params.name));
+		}
+	}
+
+	// Different api to find product model
+	getRouteParams(data) {
+
+		switch(data) {
+			case 'fresh':
+		        return '/allFresh';
+		        break;
+		    case 'sephora':
+		        return '/allSephoraProducts';
+		        break;		    
+		    default:
+		        return '/NotFound';
+		}
+
+	}
+
+	// Get list of product based on brand
+	getListofProducts(url) {		
 		let self = this;
-		axios.get('/allSephoraProducts').then(function(response) {
+		axios.get(url).then(function(response) {
 			console.log(response.data);
 			self.setState({products: response.data});
 		}).catch(function(error) {
