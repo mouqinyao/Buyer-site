@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //connect to our datablase
-mongoose.connect('mongodb://mouqinyao:PASSWORD@ds121945.mlab.com:21945/buyer-site', {
+mongoose.connect('mongodb://mouqinyao:password@ds121945.mlab.com:21945/buyer-site', {
   useMongoClient: true,
   /* other options */
 });
@@ -63,7 +63,7 @@ app.get('*', (req, res) => {
 });
 
 // start the server
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8081;
 const env = process.env.NODE_ENV || 'production';
 server.listen(port, (err) => {
   if (err) {
