@@ -11,7 +11,8 @@ class Heading extends Component {
   render() {
     return (
       <div>
-        <div className="heading">你好，欢迎光临</div>
+        <div className="heading__header"></div>
+        <div className="heading__title">你好，欢迎光临</div>
       </div>
     );
   }

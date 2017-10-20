@@ -11,11 +11,15 @@ import ProductDetail from './ProductDetail';
 export const App = () => ( 
   <div>
     <Heading/>
-    <Menu/>
-    <Route path="/" exact component={Home}/>
-    <Route path="/home" component={Home}/>
-    <Route path="/product/:name" component={Product}/>
-    <Route path="/productDetail" component={ProductDetail}/> 
+    <div className="max-container">
+	    <Menu/>
+	    <div className="right-container">
+		    <Route path="/" exact component={Home}/>
+		    <Route path="/home" component={Home}/>
+		    <Route path="/product/:name" component={Product}/>
+		    <Route path="/productDetail" component={ProductDetail}/>
+   		</div>
+   	</div> 
   </div>
  
 )

@@ -21,32 +21,30 @@ class Menu extends Component {
 
   render() {
     return (
-      <div>
-        <div className="menu">
-          <div className="menu__category">商品分类</div>
-          <ul className="menu__list">
-            <li className="menu__list-item">
-              <a href="#">衣服馆</a>
-            </li>
-            <li className="menu__list-item"><a href="#">鞋包馆</a></li>
-            <li className="menu__list-item" onClick={this.activeNavList}>
-              <a href="#">美妆馆</a>
-              {this.state.isNavActive &&
-                <ul className="menu__sub-list">
-                  <li><Link to="/product/crabtreeandevelyn">Crabtree &amp; Evelyn（螃蟹树）</Link></li>
-                  <li><Link to="/product/esteelaunder">Estee Launder（雅诗兰黛）</Link></li>
-                  <li><Link to="/product/fresh">Fresh （馥蕾诗）</Link></li>
-                  <li><Link to="/product/lancome">Lancome（兰蔻）</Link></li>
-                  <li><Link to="/product/loccitane">Loccitane（欧舒丹）</Link></li>
-                  <li><Link to="/product/kiehls">Kiehls (科颜氏)</Link></li>
-                  <li><Link to="/product/origins">Origins（悦木之源）</Link></li>
-                  <li><Link to="/product/sephora">Sephora（丝芙兰）</Link></li>
-                </ul>
-              }              
-            </li>
-            <li className="menu__list-item"><a href="#">生活馆</a></li>
-          </ul>
-        </div>
+      <div className="menu">
+        <div className="menu__category">商品分类</div>
+        <ul className="menu__list">
+          <li className="menu__list-item">
+            <a href="#">衣服馆</a>
+          </li>
+          <li className="menu__list-item"><a href="#">鞋包馆</a></li>
+          <li className="menu__list-item" onClick={this.activeNavList}>
+            <a href="#">美妆馆</a>
+            {this.state.isNavActive &&
+              <ul className="menu__sub-list">
+                <li><Link to="/product/crabtreeandevelyn">Crabtree &amp; Evelyn（螃蟹树）</Link></li>
+                <li><Link to="/product/esteelaunder">Estee Launder（雅诗兰黛）</Link></li>
+                <li><Link to="/product/fresh">Fresh （馥蕾诗）</Link></li>
+                <li><Link to="/product/lancome">Lancome（兰蔻）</Link></li>
+                <li><Link to="/product/loccitane">Loccitane（欧舒丹）</Link></li>
+                <li><Link to="/product/kiehls">Kiehls (科颜氏)</Link></li>
+                <li><Link to="/product/origins">Origins（悦木之源）</Link></li>
+                <li><Link to="/product/sephora">Sephora（丝芙兰）</Link></li>
+              </ul>
+            }              
+          </li>
+          <li className="menu__list-item"><a href="#">生活馆</a></li>
+        </ul>
       </div>
     );
   }
