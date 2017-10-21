@@ -14,16 +14,16 @@ const express = require('express'),
 // Save individual product 
 router.post('/saveProduct', function(req, res) {
 	
-	let kiehlsProductModel = new KiehlsProductModel({
-	  'referenceNumber': 6,
+	let crabtreeProductModel = new CrabtreeProductModel({
+	  'referenceNumber': 12,
 	  'title': '科颜氏纯天然面膜套装',
-	  'price': 42,
-	  'image': 'kiehls-mask-set.png',
-	  'imageDetail': 'kiehls-mask-set-detail.png'
+	  'price': 18,
+	  'image': 'crabtree-violet.png',
+	  'imageDetail': 'crabtree-violet.png'
 	});
 
 	//save the sample user
-	kiehlsProductModel.save(function(err) {
+	crabtreeProductModel.save(function(err) {
 		if (err) res.send(err);
 
 		//res.send('This product has been saved successfully.');
