@@ -14,16 +14,16 @@ const express = require('express'),
 // Save individual product 
 router.post('/saveProduct', function(req, res) {
 	
-	let sephoraProductModel = new SephoraProductModel({
-	  'referenceNumber': 4,
+	let esteelaunderProductModel = new EsteelaunderProductModel({
+	  'referenceNumber': 14,
 	  'title': '科颜氏纯天然面膜套装',
 	  'price': 75,
-	  'image': 'sephora-star-set.png',
-	  'imageDetail': 'sephora-star-set-detail.png'
+	  'image': 'estee-radiant-cream.png',
+	  'imageDetail': 'estee-radiant-cream.png'
 	});
 
-	//save the sample user
-	sephoraProductModel.save(function(err) {
+	//save 
+	esteelaunderProductModel.save(function(err) {
 		if (err) res.send(err);
 
 		//res.send('This product has been saved successfully.');
