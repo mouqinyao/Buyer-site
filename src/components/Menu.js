@@ -32,7 +32,7 @@ class Menu extends Component {
             <a href="#">美妆馆</a>
             {this.state.isNavActive &&
               <ul className="menu__sub-list">
-                <li><Link to="/product/crabtreeandevelyn">Crabtree &amp; Evelyn（螃蟹树）</Link></li>
+                <li><Link to="/product/crabtreeandevelyn">Crabtree &amp; Evelyn（瑰珀翠）</Link></li>
                 <li><Link to="/product/esteelaunder">Estee Launder（雅诗兰黛）</Link></li>
                 <li><Link to="/product/fresh">Fresh （馥蕾诗）</Link></li>
                 <li><Link to="/product/lancome">Lancome（兰蔻）</Link></li>

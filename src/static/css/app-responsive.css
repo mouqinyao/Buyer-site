@@ -73,6 +73,15 @@
 			        justify-content: space-between;
 			padding: 10px;
 		}
+
+		.product__band {
+			margin: 0;
+		}
+
+		.product__band-description {
+			padding: 10px 20px;
+			max-width: none;
+		}
 }
 
 

@@ -24,9 +24,16 @@
 
 		.product__band-img {}
 
-		.product__band-description {
+		.product__band-title {
 			font-size: 16px;
 			font-weight: bold;
+		}
+
+		.product__band-description {
+			padding: 10px 10px 10px 20px;
+			max-width: 150px;
+		    font-size: 12px;
+		    text-align: left;
 		}
 	
 	.product__container {

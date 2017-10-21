@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import axios from 'axios';
+import _ from 'lodash';
+import brands from '../data/brands';
+
 
 class Product extends Component {
 
@@ -7,11 +10,13 @@ class Product extends Component {
 	    super(props);
 
 	    this.state = {
-	    	products: []
+	    	products: [],
+	    	brand: {}
 	    }
 	}
 
 	componentDidMount() {
+		this.getBrandDetail(this.props.match.params.name);
 		this.getListofProducts(this.getRouteParams(this.props.match.params.name));
 	}
 
@@ -20,6 +25,7 @@ class Product extends Component {
 		// Update when route param is changed
 		if ( nextProps.match.params.name != this.props.match.params.name) {
 			
+			this.getBrandDetail(nextProps.match.params.name);
 			this.getListofProducts(this.getRouteParams(nextProps.match.params.name));
 		}
 	}
@@ -58,6 +64,18 @@ class Product extends Component {
 
 	}
 
+	getBrandDetail(name) {
+		let brand = _.get(brands, name);
+
+		this.setState({
+			brand : {
+				'brandName': brand.brandName,
+				'brandLogo': brand.brandLogo,
+				'brandDescription': brand.brandDescription
+			}
+		});
+	}
+
 	// Get list of product based on brand
 	getListofProducts(url) {		
 		let self = this;
@@ -70,15 +88,17 @@ class Product extends Component {
 
 	render() {
 		let products = this.state.products;
+		let brand = this.state.brand;
 
 		return (	
 		    <div className="product">
 		    	<div className="product__left-panel">
 		    		<div className="product__band">
 		    			<div className="product__band-logo">
-		    				<img src="/img/sephora-logo.jpg" className="product__band-img"/>
+		    				<img src={`/img/${brand.brandLogo}`} className="product__band-img"/>
 		    			</div>
-		    			<div className="product__band-description">品牌名称: 丝芙兰</div>
+		    			<div className="product__band-title">品牌名称: {brand.brandName}</div>
+		    			<div className="product__band-description">{brand.brandDescription}</div>
 		    		</div>
 		    	</div>
 		    	<div className="product__container">
