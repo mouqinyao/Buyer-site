@@ -106,7 +106,78 @@ router.get('/allSephoraProducts', function(req, res) {
     });
 });
 
+// Find single product 
+router.get('/allCrabtreeProducts/:id', function(req, res) {
 
+	CrabtreeProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allEsteelaunderProducts/:id', function(req, res) {
+
+	EsteelaunderProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allFreshProducts/:id', function(req, res) {
+
+	FreshProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allLancomeProducts/:id', function(req, res) {
+
+	LancomeProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allLoccitaneProducts/:id', function(req, res) {
+
+	LoccitaneProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allKiehlsProducts/:id', function(req, res) {
+
+	KiehlsProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allOriginsProducts/:id', function(req, res) {
+
+	OriginsProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
+
+router.get('/allSephoraProducts/:id', function(req, res) {
+
+	SephoraProductModel.find({'referenceNumber': req.params.id}, function(err, product) {
+		if (err) res.send(err);
+
+		res.send(product);
+	});
+});
 
 
 // export router

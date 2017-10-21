@@ -9,6 +9,8 @@ class Product extends Component {
 	constructor(props) {
 	    super(props);
 
+	    this.getProductDetail = this.getProductDetail.bind(this);
+
 	    this.state = {
 	    	products: [],
 	    	brand: {}
@@ -86,6 +88,17 @@ class Product extends Component {
 		});
 	}
 
+	// Get product detail
+	getProductDetail(data) {
+
+		let brandUrl = this.getRouteParams(this.props.match.params.name);
+		
+		this.props.history.push({
+			pathname:'/productDetail',
+			search: '?'+ brandUrl +'/' + data.referenceNumber
+		});
+	}
+
 	render() {
 		let products = this.state.products;
 		let brand = this.state.brand;
@@ -103,7 +116,7 @@ class Product extends Component {
 		    	</div>
 		    	<div className="product__container">
 		    		{products.map(product =>
-		    		<div className="product__card" key={product.referenceNumber}>
+		    		<div className="product__card" key={product.referenceNumber} onClick={() => this.getProductDetail(product)}>
 		    			<div className="product__card-img-container">
 		    				<img src={`/img/${product.image}`} className="product__card-img"/>
 		    			</div>
