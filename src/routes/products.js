@@ -14,16 +14,16 @@ const express = require('express'),
 // Save individual product 
 router.post('/saveProduct', function(req, res) {
 	
-	let lancomeProductModel = new LancomeProductModel({
-	  'referenceNumber': 5,
-	  'title': '悦木之源迷你面膜套装',
-	  'price': 140,
-	  'image': 'lancome-renergie-set.png',
-	  'imageDetail': 'lancome-renergie-set.png'
+	let kiehlsProductModel = new KiehlsProductModel({
+	  'referenceNumber': 6,
+	  'title': '科颜氏纯天然面膜套装',
+	  'price': 42,
+	  'image': 'kiehls-mask-set.png',
+	  'imageDetail': 'kiehls-mask-set-detail.png'
 	});
 
 	//save the sample user
-	lancomeProductModel.save(function(err) {
+	kiehlsProductModel.save(function(err) {
 		if (err) res.send(err);
 
 		//res.send('This product has been saved successfully.');
