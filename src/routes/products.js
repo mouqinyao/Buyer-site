@@ -14,16 +14,16 @@ const express = require('express'),
 // Save individual product 
 router.post('/saveProduct', function(req, res) {
 	
-	let crabtreeProductModel = new CrabtreeProductModel({
-	  'referenceNumber': 12,
+	let sephoraProductModel = new SephoraProductModel({
+	  'referenceNumber': 4,
 	  'title': '科颜氏纯天然面膜套装',
-	  'price': 18,
-	  'image': 'crabtree-violet.png',
-	  'imageDetail': 'crabtree-violet.png'
+	  'price': 75,
+	  'image': 'sephora-star-set.png',
+	  'imageDetail': 'sephora-star-set-detail.png'
 	});
 
 	//save the sample user
-	crabtreeProductModel.save(function(err) {
+	sephoraProductModel.save(function(err) {
 		if (err) res.send(err);
 
 		//res.send('This product has been saved successfully.');
