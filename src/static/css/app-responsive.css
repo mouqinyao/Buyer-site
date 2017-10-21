@@ -82,6 +82,10 @@
 			padding: 10px 20px;
 			max-width: none;
 		}
+
+		.product__detail-right {
+			padding: 0 20px;
+		}
 }
 
 

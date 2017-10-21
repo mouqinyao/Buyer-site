@@ -42,7 +42,7 @@ class ProductDetail extends Component {
 	    				<div className="product__detail-info-header">商品详情</div>
 	    				<ul className="product__detail-info-body">
 	    				{lists.map((list) =>
-	    					<li key={list}>{list}</li>
+	    					<li key={list}>- {list}</li>
   						)}
   						</ul>
 	    			</div>
